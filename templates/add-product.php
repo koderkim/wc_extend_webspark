@@ -19,7 +19,7 @@
 
 <?php $_product = isset($_GET['id']) ? wc_get_product($_GET['id']) : null; ?>
 
-<form action="" method="POST">
+<form action="" method="POST" enctype="multipart/form-data">
 	<input type="hidden" name="_action" value="wc_extend_webspark_save_product">
 	<input type="hidden" name="_wpnonce" value="<?php echo wp_create_nonce('wc_extend_webspark') ?>">
 	<input type="hidden" name="_product_id" value="<?php echo isset($_product) ? $_product->get_ID() : ''; ?>">
